@@ -2,390 +2,410 @@
                 3D RING BOX SECTION
 =========================================================*/
 
-.proposal-section{
-    background:linear-gradient(180deg,#fffdfb,#fff3f7);
-    text-align:center;
-    overflow:hidden;
-    position:relative;
+.proposal-section {
+  background: linear-gradient(180deg, #fffdfb, #fff3f7);
+  text-align: center;
+  overflow: hidden;
+  position: relative;
 }
 
-.proposal-container{
-    display:flex;
-    flex-direction:column;
-    align-items:center;
+.proposal-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.tap-text{
-    margin-top:30px;
-    color:#ff4f87;
-    font-size:20px;
-    font-weight:600;
-    animation:bounce 2s infinite;
+.tap-text {
+  margin-top: 30px;
+  color: #ff4f87;
+  font-size: 20px;
+  font-weight: 600;
+  animation: bounce 2s infinite;
 }
 
 /*======================
       3D RING BOX
 =======================*/
 
-.ring-scene{
-    perspective:1200px;
-    margin-top:40px;
+.ring-scene {
+  perspective: 1200px;
+  margin-top: 40px;
 }
 
-.ring-box{
-    width:220px;
-    height:170px;
-    position:relative;
-    transform-style:preserve-3d;
-    cursor:pointer;
-    transition:.8s;
+.ring-box {
+  width: 220px;
+  height: 170px;
+  position: relative;
+  transform-style: preserve-3d;
+  cursor: pointer;
+  transition: 0.8s;
 }
 
-.base{
-    width:220px;
-    height:120px;
-    background:linear-gradient(145deg,#d20b45,#99002e);
-    position:absolute;
-    bottom:0;
-    border-radius:0 0 20px 20px;
-    box-shadow:0 20px 40px rgba(0,0,0,.25);
+.base {
+  width: 220px;
+  height: 120px;
+  background: linear-gradient(145deg, #d20b45, #99002e);
+  position: absolute;
+  bottom: 0;
+  border-radius: 0 0 20px 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
 }
 
-.lid{
-    width:220px;
-    height:70px;
-    background:linear-gradient(145deg,#ff4f87,#d90355);
-    border-radius:20px 20px 0 0;
-    position:absolute;
-    top:0;
-    left:0;
-    transform-origin:top;
-    transition:1s;
-    box-shadow:0 8px 18px rgba(0,0,0,.25);
+.lid {
+  width: 220px;
+  height: 70px;
+  background: linear-gradient(145deg, #ff4f87, #d90355);
+  border-radius: 20px 20px 0 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform-origin: top;
+  transition: 1s;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
 }
 
 /* Box Open */
 
-.ring-box.open .lid{
-    transform:rotateX(-140deg);
+.ring-box.open .lid {
+  transform: rotateX(-140deg);
 }
 
-.ring{
-    width:75px;
-    height:75px;
-    border:8px solid gold;
-    border-radius:50%;
-    position:absolute;
-    left:50%;
-    bottom:18px;
-    transform:translateX(-50%);
-    transition:1s;
+.ring {
+  width: 75px;
+  height: 75px;
+  border: 8px solid gold;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  bottom: 18px;
+  transform: translateX(-50%);
+  transition: 1s;
 }
 
-.ring-box.open .ring{
-    bottom:90px;
+.ring-box.open .ring {
+  bottom: 90px;
 }
 
-.diamond{
-    width:28px;
-    height:28px;
-    background:white;
-    transform:rotate(45deg);
-    position:absolute;
-    top:-20px;
-    left:50%;
-    margin-left:-14px;
-    border-radius:4px;
-    box-shadow:0 0 25px white;
-    animation:sparkle 1.5s infinite;
+.diamond {
+  width: 28px;
+  height: 28px;
+  background: white;
+  transform: rotate(45deg);
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  margin-left: -14px;
+  border-radius: 4px;
+  box-shadow: 0 0 25px white;
+  animation: sparkle 1.5s infinite;
 }
 
-@keyframes sparkle{
+@keyframes sparkle {
+  0%,
+  100% {
+    box-shadow: 0 0 10px white;
+  }
 
-0%,100%{
-box-shadow:0 0 10px white;
-}
-
-50%{
-box-shadow:0 0 35px white;
-}
-
+  50% {
+    box-shadow: 0 0 35px white;
+  }
 }
 
 /*=========================================================
                 PROPOSAL CARD
 =========================================================*/
 
-.proposal-card{
-    margin-top:60px;
-    max-width:700px;
-    background:rgba(255,255,255,.8);
-    backdrop-filter:blur(15px);
-    padding:45px;
-    border-radius:30px;
-    box-shadow:0 20px 40px rgba(0,0,0,.08);
-    opacity:0;
-    transform:translateY(60px);
-    transition:1s;
+.proposal-card {
+  margin-top: 60px;
+  max-width: 700px;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(15px);
+  padding: 45px;
+  border-radius: 30px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+  opacity: 0;
+  transform: translateY(60px);
+  transition: 1s;
 }
 
-.proposal-card.show{
-    opacity:1;
-    transform:translateY(0);
+.proposal-card.show {
+  opacity: 1;
+  transform: translateY(0);
 }
 
-.proposal-card i{
-    font-size:50px;
-    color:#ff4f87;
+.proposal-card i {
+  font-size: 50px;
+  color: #ff4f87;
 }
 
-.proposal-card h2{
-    margin:20px 0;
-    color:#ff4f87;
-    font-family:'Great Vibes',cursive;
-    font-size:42px;
+.proposal-card h2 {
+  margin: 20px 0;
+  color: #ff4f87;
+  font-family: "Great Vibes", cursive;
+  font-size: 42px;
 }
 
-.proposal-card p{
-    color:#666;
-    line-height:1.9;
-    margin:15px 0;
+.proposal-card p {
+  color: #666;
+  line-height: 1.9;
+  margin: 15px 0;
 }
 
-.proposal-card h1{
-    color:#d40055;
-    margin-top:35px;
-    font-size:38px;
+.proposal-card h1 {
+  color: #d40055;
+  margin-top: 35px;
+  font-size: 38px;
 }
 
-.proposal-btn{
-    margin-top:30px;
-    padding:16px 35px;
-    background:#ff4f87;
-    color:#fff;
-    border:none;
-    border-radius:50px;
-    font-size:17px;
-    transition:.3s;
+.proposal-btn {
+  margin-top: 30px;
+  padding: 16px 35px;
+  background: #ff4f87;
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  font-size: 17px;
+  transition: 0.3s;
 }
 
-.proposal-btn:hover{
-    transform:scale(1.08);
+.proposal-btn:hover {
+  transform: scale(1.08);
 }
 
 /*=========================================================
                 SPARKLES
 =========================================================*/
 
-.sparkles{
-    position:fixed;
-    inset:0;
-    pointer-events:none;
+.sparkles {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
 }
 
-.sparkles span{
-    position:absolute;
-    width:8px;
-    height:8px;
-    background:#fff;
-    border-radius:50%;
-    animation:twinkle 4s infinite;
+.sparkles span {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: #fff;
+  border-radius: 50%;
+  animation: twinkle 4s infinite;
 }
 
-.sparkles span:nth-child(1){top:10%;left:15%;}
-.sparkles span:nth-child(2){top:20%;left:80%;}
-.sparkles span:nth-child(3){top:45%;left:30%;}
-.sparkles span:nth-child(4){top:65%;left:75%;}
-.sparkles span:nth-child(5){top:82%;left:20%;}
-.sparkles span:nth-child(6){top:75%;left:60%;}
-.sparkles span:nth-child(7){top:38%;left:90%;}
-.sparkles span:nth-child(8){top:8%;left:55%;}
-
-@keyframes twinkle{
-
-0%,100%{
-opacity:.2;
-transform:scale(.5);
+.sparkles span:nth-child(1) {
+  top: 10%;
+  left: 15%;
+}
+.sparkles span:nth-child(2) {
+  top: 20%;
+  left: 80%;
+}
+.sparkles span:nth-child(3) {
+  top: 45%;
+  left: 30%;
+}
+.sparkles span:nth-child(4) {
+  top: 65%;
+  left: 75%;
+}
+.sparkles span:nth-child(5) {
+  top: 82%;
+  left: 20%;
+}
+.sparkles span:nth-child(6) {
+  top: 75%;
+  left: 60%;
+}
+.sparkles span:nth-child(7) {
+  top: 38%;
+  left: 90%;
+}
+.sparkles span:nth-child(8) {
+  top: 8%;
+  left: 55%;
 }
 
-50%{
-opacity:1;
-transform:scale(1.5);
-}
+@keyframes twinkle {
+  0%,
+  100% {
+    opacity: 0.2;
+    transform: scale(0.5);
+  }
 
+  50% {
+    opacity: 1;
+    transform: scale(1.5);
+  }
 }
 
 /*=========================================================
                 THANK YOU
 =========================================================*/
 
-.thank-you{
-    background:#fff;
+.thank-you {
+  background: #fff;
 }
 
-.thank-card{
-    max-width:800px;
-    margin:auto;
-    text-align:center;
-    background:#fff8fb;
-    padding:55px;
-    border-radius:30px;
-    box-shadow:0 20px 40px rgba(0,0,0,.08);
+.thank-card {
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+  background: #fff8fb;
+  padding: 55px;
+  border-radius: 30px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
 }
 
-.thank-card i{
-    font-size:55px;
-    color:#ff4f87;
+.thank-card i {
+  font-size: 55px;
+  color: #ff4f87;
 }
 
-.thank-card h2{
-    margin:20px 0;
-    color:#ff4f87;
-    font-size:40px;
-    font-family:'Great Vibes',cursive;
+.thank-card h2 {
+  margin: 20px 0;
+  color: #ff4f87;
+  font-size: 40px;
+  font-family: "Great Vibes", cursive;
 }
 
-.thank-card p{
-    line-height:2;
-    color:#666;
+.thank-card p {
+  line-height: 2;
+  color: #666;
 }
 
-.thank-card h3{
-    margin-top:25px;
-    color:#d40055;
+.thank-card h3 {
+  margin-top: 25px;
+  color: #d40055;
 }
 
 /*=========================================================
                 FOOTER
 =========================================================*/
 
-footer{
-    background:#ff4f87;
-    color:#fff;
-    text-align:center;
-    padding:45px 20px;
+footer {
+  background: #ff4f87;
+  color: #fff;
+  text-align: center;
+  padding: 45px 20px;
 }
 
-footer h2{
-    font-size:34px;
-    font-family:'Great Vibes',cursive;
+footer h2 {
+  font-size: 34px;
+  font-family: "Great Vibes", cursive;
 }
 
-footer p{
-    margin:18px 0;
+footer p {
+  margin: 18px 0;
 }
 
-.footer-icons{
-    display:flex;
-    justify-content:center;
-    gap:25px;
-    font-size:24px;
+.footer-icons {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  font-size: 24px;
 }
 
 /*=========================================================
                 POPUP
 =========================================================*/
 
-.popup-overlay{
-    position:fixed;
-    inset:0;
-    background:rgba(0,0,0,.6);
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    visibility:hidden;
-    opacity:0;
-    transition:.5s;
-    z-index:9999;
+.popup-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.5s;
+  z-index: 9999;
 }
 
-.popup-overlay.show{
-    visibility:visible;
-    opacity:1;
+.popup-overlay.show {
+  visibility: visible;
+  opacity: 1;
 }
 
-.popup-content{
-    background:#fff;
-    padding:40px;
-    width:90%;
-    max-width:450px;
-    border-radius:25px;
-    text-align:center;
-    animation:popup .5s;
+.popup-content {
+  background: #fff;
+  padding: 40px;
+  width: 90%;
+  max-width: 450px;
+  border-radius: 25px;
+  text-align: center;
+  animation: popup 0.5s;
 }
 
-@keyframes popup{
-from{
-transform:scale(.5);
-opacity:0;
-}
-to{
-transform:scale(1);
-opacity:1;
-}
-}
-
-.popup-content h1{
-    font-size:55px;
+@keyframes popup {
+  from {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
 
-.popup-content h2{
-    color:#ff4f87;
-    margin:20px 0;
+.popup-content h1 {
+  font-size: 55px;
 }
 
-.popup-content p{
-    color:#666;
-    line-height:1.8;
+.popup-content h2 {
+  color: #ff4f87;
+  margin: 20px 0;
 }
 
-#closePopup{
-    margin-top:25px;
-    background:#ff4f87;
-    color:#fff;
-    padding:14px 30px;
-    border:none;
-    border-radius:50px;
+.popup-content p {
+  color: #666;
+  line-height: 1.8;
+}
+
+#closePopup {
+  margin-top: 25px;
+  background: #ff4f87;
+  color: #fff;
+  padding: 14px 30px;
+  border: none;
+  border-radius: 50px;
 }
 
 /*=========================================================
                 RESPONSIVE
 =========================================================*/
 
-@media(max-width:768px){
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
 
-.hero{
-flex-direction:column;
-text-align:center;
-}
+  .nav-links {
+    display: none;
+  }
 
-.nav-links{
-display:none;
-}
+  .photo-frame {
+    width: 100%;
+    max-width: 340px;
+  }
 
-.photo-frame{
-width:100%;
-max-width:340px;
-}
+  .ring-box {
+    transform: scale(0.85);
+  }
 
-.ring-box{
-transform:scale(.85);
-}
+  .proposal-card {
+    padding: 30px 20px;
+  }
 
-.proposal-card{
-padding:30px 20px;
-}
+  .proposal-card h1 {
+    font-size: 28px;
+  }
 
-.proposal-card h1{
-font-size:28px;
-}
+  .thank-card {
+    padding: 35px 20px;
+  }
 
-.thank-card{
-padding:35px 20px;
-}
-
-footer h2{
-font-size:28px;
-}
-
+  footer h2 {
+    font-size: 28px;
+  }
 }
