@@ -1,0 +1,251 @@
+/*=========================================================
+                MEMORIES SECTION
+=========================================================*/
+
+.memories{
+    background:#fffaf8;
+    position:relative;
+    overflow:hidden;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:60px;
+}
+
+.section-title h2{
+    font-size:46px;
+    color:#ff4f87;
+    font-family:'Great Vibes',cursive;
+    margin-bottom:15px;
+}
+
+.section-title p{
+    color:#777;
+    font-size:17px;
+}
+
+/*=========================================================
+                SLIDER
+=========================================================*/
+
+.memory-slider{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:25px;
+    position:relative;
+}
+
+.slider-wrapper{
+    display:flex;
+    gap:30px;
+    overflow-x:auto;
+    scroll-behavior:smooth;
+    scrollbar-width:none;
+    width:100%;
+    padding:15px;
+}
+
+.slider-wrapper::-webkit-scrollbar{
+    display:none;
+}
+
+/*=========================================================
+                MEMORY CARD
+=========================================================*/
+
+.memory-card{
+    min-width:320px;
+    background:#fff;
+    border-radius:28px;
+    overflow:hidden;
+    box-shadow:0 20px 40px rgba(0,0,0,.08);
+    transition:.4s;
+    flex-shrink:0;
+}
+
+.memory-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 25px 50px rgba(255,90,140,.25);
+}
+
+.memory-image{
+    position:relative;
+    overflow:hidden;
+}
+
+.memory-image img{
+    width:100%;
+    height:400px;
+    object-fit:cover;
+    transition:.5s;
+}
+
+.memory-card:hover img{
+    transform:scale(1.08);
+}
+
+.overlay{
+    position:absolute;
+    inset:0;
+    background:linear-gradient(rgba(0,0,0,.05),
+    rgba(255,80,130,.35));
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    opacity:0;
+    transition:.4s;
+}
+
+.overlay i{
+    color:#fff;
+    font-size:45px;
+    transform:scale(.5);
+    transition:.4s;
+}
+
+.memory-card:hover .overlay{
+    opacity:1;
+}
+
+.memory-card:hover .overlay i{
+    transform:scale(1);
+}
+
+.memory-card h3{
+    text-align:center;
+    margin-top:22px;
+    color:#ff4f87;
+    font-size:24px;
+}
+
+.memory-card p{
+    padding:15px 25px 28px;
+    text-align:center;
+    color:#666;
+    line-height:1.7;
+}
+
+/*=========================================================
+                SLIDER BUTTONS
+=========================================================*/
+
+.slider-btn{
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    border:none;
+    background:#ff5c8d;
+    color:#fff;
+    font-size:22px;
+    cursor:pointer;
+    transition:.3s;
+    box-shadow:0 10px 25px rgba(255,90,140,.3);
+}
+
+.slider-btn:hover{
+    transform:scale(1.1);
+    background:#ff3d78;
+}
+
+.prev{
+    flex-shrink:0;
+}
+
+.next{
+    flex-shrink:0;
+}
+
+/*=========================================================
+                DOTS
+=========================================================*/
+
+.slider-dots{
+    margin-top:35px;
+    display:flex;
+    justify-content:center;
+    gap:12px;
+}
+
+.dot{
+    width:13px;
+    height:13px;
+    border-radius:50%;
+    background:#d7d7d7;
+    transition:.3s;
+    cursor:pointer;
+}
+
+.dot.active{
+    width:35px;
+    border-radius:20px;
+    background:#ff5c8d;
+}
+
+/*=========================================================
+                LOVE QUOTES
+=========================================================*/
+
+.love-quotes{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+    margin-top:90px;
+}
+
+.quote-card{
+    background:rgba(255,255,255,.65);
+    backdrop-filter:blur(15px);
+    border-radius:25px;
+    padding:35px;
+    text-align:center;
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
+    transition:.4s;
+}
+
+.quote-card:hover{
+    transform:translateY(-10px);
+}
+
+.quote-card i{
+    font-size:42px;
+    color:#ff5c8d;
+    margin-bottom:18px;
+}
+
+.quote-card p{
+    color:#666;
+    font-size:17px;
+    line-height:1.8;
+}
+
+/*=========================================================
+                MOBILE
+=========================================================*/
+
+@media(max-width:768px){
+
+.memory-card{
+    min-width:260px;
+}
+
+.memory-image img{
+    height:330px;
+}
+
+.section-title h2{
+    font-size:36px;
+}
+
+.slider-btn{
+    width:48px;
+    height:48px;
+    font-size:18px;
+}
+
+.love-quotes{
+    grid-template-columns:1fr;
+}
+
+}
