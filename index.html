@@ -1,1 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A personal love letter and proposal page created just for Pravardhini.">
+    <title>Dear Pravardhini ❤️</title>
 
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
+
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!--------- Floating Hearts --------->
+<div class="floating-hearts" aria-hidden="true"></div>
+
+<!--------- Background Music --------->
+<audio id="bgMusic" loop>
+    <source src="asstes/music/background-music.mp3" type="audio/mpeg">
+</audio>
+
+<!--------- Navbar --------->
+<nav class="navbar" aria-label="Main navigation">
+    <div class="logo">
+        <i class="fa-regular fa-heart" aria-hidden="true"></i>
+        <span>For You</span>
+    </div>
+
+    <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#memories">Memories</a></li>
+        <li><a href="#letter">My Heart</a></li>
+        <li><a href="#proposal">Promise</a></li>
+        <li><a href="#thankyou">For You</a></li>
+    </ul>
+
+    <button id="musicBtn" type="button" aria-pressed="false">
+        <i class="fa-solid fa-music" aria-hidden="true"></i>
+        <span id="musicBtnLabel">Play Music</span>
+    </button>
+</nav>
+
+<!--------- Hero --------->
+<section class="hero" id="home">
+    <div class="hero-left" data-aos="fade-right">
+        <h1>Dedicated to Someone Truly Special...</h1>
+        <p>
+            A Few Words from the Bottom of My Heart... ❤️ To the most beautiful soul who holds a forever place in my heart 🤍
+        </p>
+        <div class="hero-buttons">
+            <button id="openLetter" type="button">
+                Open My Heart
+                <i class="fa-regular fa-heart" aria-hidden="true"></i>
+            </button>
+            <a href="#memories" class="scrollBtn">Explore Memories</a>
+        </div>
+    </div>
+
+    <div class="hero-right" data-aos="zoom-in">
+        <div class="photo-frame">
+            <img src="asstes/images/main.png" alt="Photo of Pravardhini smiling">
+            <div class="note">
+                <p>Some people come into our lives... and stay in our hearts forever. ❤️</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="scroll-down" aria-hidden="true">
+    <i class="fa-solid fa-angles-down"></i>
+</div>
+
+<!--------- BEAUTIFUL MEMORIES SECTION --------->
+<section class="memories" id="memories">
+    <div class="section-title" data-aos="fade-up">
+        <h2>Beautiful Memories ❤️</h2>
+        <p>Every picture tells a story that my heart never forgets.</p>
+    </div>
+
+    <div class="memory-slider">
+        <button class="slider-btn prev" id="prevBtn" type="button" aria-label="Previous memory">
+            <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+        </button>
+
+        <div class="slider-wrapper" id="slider">
+            <div class="memory-card active" data-aos="zoom-in">
+                <div class="memory-image">
+                    <img src="asstes/images/img1.png" alt="Pravardhini smiling">
+                    <div class="overlay" aria-hidden="true"><i class="fa-solid fa-heart"></i></div>
+                </div>
+                <h3>Your Smile 😊</h3>
+                <p>The smile that can brighten even my darkest day.</p>
+            </div>
+
+            <div class="memory-card" data-aos="zoom-in" data-aos-delay="100">
+                <div class="memory-image">
+                    <img src="asstes/images/img2.jpg" alt="Pravardhini looking cheerful">
+                    <div class="overlay" aria-hidden="true"><i class="fa-solid fa-heart"></i></div>
+                </div>
+                <h3>Your Cuteness 🥺</h3>
+                <p>Every little expression makes my heart melt.</p>
+            </div>
+
+            <div class="memory-card" data-aos="zoom-in" data-aos-delay="200">
+                <div class="memory-image">
+                    <img src="asstes/images/img3.png" alt="Pravardhini with a gentle expression">
+                    <div class="overlay" aria-hidden="true"><i class="fa-solid fa-heart"></i></div>
+                </div>
+                <h3>Your Innocence 🤍</h3>
+                <p>Pure, beautiful and unforgettable.</p>
+            </div>
+
+            <div class="memory-card" data-aos="zoom-in" data-aos-delay="300">
+                <div class="memory-image">
+                    <img src="asstes/images/img4.png" alt="Close-up photo of Pravardhini">
+                    <div class="overlay" aria-hidden="true"><i class="fa-solid fa-heart"></i></div>
+                </div>
+                <h3>Your Eyes ✨</h3>
+                <p>I can get lost in them forever.</p>
+            </div>
+
+            <div class="memory-card">
+                <div class="memory-image">
+                    <img src="asstes/images/img5.png" alt="Pravardhini in a candid moment">
+                    <div class="overlay" aria-hidden="true"><i class="fa-solid fa-heart"></i></div>
+                </div>
+                <h3>Your Kindness 🌸</h3>
+                <p>Your heart is even more beautiful than your smile.</p>
+            </div>
+
+            <div class="memory-card">
+                <div class="memory-image">
+                    <img src="asstes/images/img6.jpg" alt="Pravardhini and a treasured memory">
+                    <div class="overlay" aria-hidden="true"><i class="fa-solid fa-heart"></i></div>
+                </div>
+                <h3>Forever ❤️</h3>
+                <p>Every memory with you is my favourite memory.</p>
+            </div>
+        </div>
+
+        <button class="slider-btn next" id="nextBtn" type="button" aria-label="Next memory">
+            <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+        </button>
+    </div>
+
+    <div class="slider-dots" role="tablist" aria-label="Select memory slide">
+        <button class="dot active" type="button" role="tab" aria-selected="true" aria-label="Memory 1"></button>
+        <button class="dot" type="button" role="tab" aria-selected="false" aria-label="Memory 2"></button>
+        <button class="dot" type="button" role="tab" aria-selected="false" aria-label="Memory 3"></button>
+        <button class="dot" type="button" role="tab" aria-selected="false" aria-label="Memory 4"></button>
+        <button class="dot" type="button" role="tab" aria-selected="false" aria-label="Memory 5"></button>
+        <button class="dot" type="button" role="tab" aria-selected="false" aria-label="Memory 6"></button>
+    </div>
+</section>
+
+<!--------- LOVE QUOTES SECTION --------->
+<section class="love-quotes" aria-label="Love quotes">
+    <div class="quote-card" data-aos="fade-right">
+        <i class="fa-solid fa-quote-left" aria-hidden="true"></i>
+        <p>Every time I look at you, I find another reason to smile.</p>
+    </div>
+    <div class="quote-card" data-aos="fade-up">
+        <i class="fa-solid fa-heart" aria-hidden="true"></i>
+        <p>Some people become memories, but you became a part of my heart.</p>
+    </div>
+    <div class="quote-card" data-aos="fade-left">
+        <i class="fa-solid fa-star" aria-hidden="true"></i>
+        <p>If life gives me one wish, I would simply wish for your happiness.</p>
+    </div>
+</section>
+
+<!--------- FROM THE BOTTOM OF MY HEART --------->
+<section class="love-letter" id="letter">
+    <div class="section-title" data-aos="fade-up">
+        <h2>From the Bottom of My Heart ❤️</h2>
+        <p>A few words I've always wanted to tell you...</p>
+    </div>
+
+    <div class="letter-card glass" data-aos="zoom-in">
+        <span class="top-icon" aria-hidden="true"><i class="fa-solid fa-heart"></i></span>
+        <h3>Dear Pravardhini,</h3>
+        <div class="typing-text">
+            <p>
+                First of all, thank you so much. Meeting you has been one of the greatest blessings of my life. You have brought so much happiness and peace into my life, and you've changed me into a better person. I'll always be thankful for that.
+            </p>
+            <p>
+                Ever since the very first time we talked, I've wanted to tell you this. But back then, I was too scared and nervous to say it. I didn't have the courage because I was afraid of how you might feel. Today, I've finally gathered the courage to speak my heart.
+            </p>
+            <p>
+                If anything I say makes you feel even a little uncomfortable or hurts you in any way, I am truly sorry. That has never been my intention. I never wanted to make you feel bad. If my words upset you in any way, please forgive me.
+            </p>
+            <p>
+                To be honest, I've never had feelings like this for any girl before. I've never shared my heart with anyone the way I'm sharing it with you today. 
+            </p>
+            <p>
+                You are the first girl in my life for whom I've had such genuine feelings. Every conversation with you makes my day better, and your presence fills my life with happiness and peace. I've become so deeply attached to you, Pravardhini, and I just wanted you to know how incredibly special you are to me.
+            </p>
+            <p>
+                That's why I made this website—a small surprise from my side. Through it, I simply wanted to express the feelings I've been carrying in my heart. I hope you like it and understand how much you truly mean to me.
+            </p>
+           <!-- <p class="highlight">A part of my heart will always smile whenever it remembers you.💖</p> -->
+        </div>
+    </div>
+</section>
+
+<!--------- REASONS SECTION --------->
+<section class="reasons">
+    <div class="section-title" data-aos="fade-up">
+        <h2>Why You're So Special 💖</h2>
+    </div>
+    <div class="reason-grid">
+        <div class="reason-card" data-aos="fade-up">
+            <i class="fa-solid fa-face-smile" aria-hidden="true"></i>
+            <h3>Your Smile</h3>
+            <p>Your smile has a magic that turns my darkest days into beautiful ones. Every time you smile, my heart quietly smiles with you.</p>
+        </div>
+        <div class="reason-card" data-aos="fade-up" data-aos-delay="100">
+            <i class="fa-solid fa-heart" aria-hidden="true"></i>
+            <h3>Your Kindness</h3>
+            <p>Your heart is more beautiful than words can describe.</p>
+        </div>
+        <div class="reason-card" data-aos="fade-up" data-aos-delay="200">
+            <i class="fa-solid fa-star" aria-hidden="true"></i>
+            <h3>Your Presence</h3>
+            <p>Your presence brings a peace that words can't explain. Even the simplest moments become unforgettable when you're around.</p>
+        </div>
+        <div class="reason-card" data-aos="fade-up" data-aos-delay="300">
+            <i class="fa-solid fa-infinity" aria-hidden="true"></i>
+            <h3>Forever</h3>
+            <p>Some memories stay with us forever—and you're one of mine.</p>
+        </div>
+    </div>
+</section>
+
+<!--------- HEART TIMELINE --------->
+<section class="timeline">
+    <div class="section-title" data-aos="fade-up">
+        <h2>Our Story ❤️</h2>
+    </div>
+    <div class="timeline-container">
+        <div class="timeline-item left">
+            <div class="timeline-content">
+                <h3>🌸 First Meeting</h3>
+                <p>The day I first saw you became unforgettable.</p>
+            </div>
+        </div>
+        <div class="timeline-item right">
+            <div class="timeline-content">
+                <h3>😊 Beautiful Memories</h3>
+                <p>Every small conversation became precious.</p>
+            </div>
+        </div>
+        <div class="timeline-item left">
+            <div class="timeline-content">
+                <h3>💖 Respect</h3>
+                <p>You inspired me to become a better person.</p>
+            </div>
+        </div>
+        <div class="timeline-item right">
+            <div class="timeline-content">
+                <h3>✨ Today</h3>
+                <p>I'm simply grateful that you became part of my life.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--------- 3D RING BOX PROPOSAL SECTION --------->
+<section class="proposal-section" id="proposal">
+    <div class="section-title" data-aos="fade-up">
+        <h2>The Most Important Question 💍</h2>
+        <p>Touch the ring box to discover what's inside.</p>
+    </div>
+
+    <div class="proposal-container">
+        <div class="ring-scene">
+            <button class="ring-box" id="ringBox" type="button" aria-label="Open the ring box">
+                <div class="lid" aria-hidden="true"></div>
+                <div class="base" aria-hidden="true">
+                    <div class="ring">
+                        <div class="diamond"></div>
+                    </div>
+                </div>
+            </button>
+        </div>
+
+        <p class="tap-text">
+            <i class="fa-solid fa-hand-pointer" aria-hidden="true"></i>
+            Tap the Ring Box
+        </p>
+
+        <div class="proposal-card" id="proposalCard">
+            <i class="fa-solid fa-heart" aria-hidden="true"></i>
+            <h2>My Dear Pravardhini, 👸</h2>
+            <p>
+                There was a time when these words lived only in my heart, but today I finally have the courage to say them.
+            </p>
+            <p>
+                You make my world brighter, my heart happier, and my life more meaningful. Every moment with you is a memory I'll always cherish.
+            </p>
+            <h3>I love you Pravardhini, truly and wholeheartedly.</h3>
+            <p>
+                I don't know what tomorrow has planned for us, but if I get one wish, it's to spend every tomorrow with you.
+            </p>
+            <p>
+                So today, with all the courage I have...
+            </p>
+            <h3>Will you be mine? ❤️🌹</h3>
+            <button class="proposal-btn" type="button">Forever & Always ❤️</button>
+        </div>
+    </div>
+</section>
+
+<div class="sparkles" aria-hidden="true">
+    <span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span>
+</div>
+
+<!--------- THANK YOU SECTION --------->
+<section class="thank-you" id="thankyou">
+    <div class="thank-card" data-aos="zoom-in">
+        <i class="fa-solid fa-heart-circle-check" aria-hidden="true"></i>
+        <h2>Thank You ❤️</h2>
+        <p>
+            If this is the last page you read, I hope you close it with a smile and a heart that's just a little warmer.
+Thank you... for walking into my life and making it more beautiful than I ever imagined. You became a chapter I'll never stop reading, a memory time can never erase, and a feeling my heart will always cherish.
+        </p>
+        <p>
+            No matter what your answer is, I'll always pray that your life is filled with endless happiness, beautiful moments, and every dream you've ever wished for.
+        </p>
+        <h3>You'll always have a place in my heart that no one else can ever replace. Forever & Always. ❤️🌹</h3>
+    </div>
+</section>
+
+<!--------- FOOTER --------->
+<footer>
+    <h2>
+        Made With
+        <i class="fa-solid fa-heart" aria-hidden="true"></i>
+        For Pravardhini
+    </h2>
+    <p>Every ending is also the beginning of another beautiful story.</p>
+    <div class="footer-icons" aria-hidden="true">
+        <i class="fa-solid fa-heart"></i>
+        <i class="fa-solid fa-ring"></i>
+        <i class="fa-solid fa-star"></i>
+        <i class="fa-solid fa-heart"></i>
+    </div>
+</footer>
+
+<!--------- CUSTOM POPUP AFTER OPENING RING --------->
+<div class="popup-overlay" id="popup" role="dialog" aria-modal="true" aria-labelledby="popupTitle" hidden>
+    <div class="popup-content">
+        <p class="popup-icon" aria-hidden="true">💍❤️</p>
+        <h2 id="popupTitle">My Dear Pravardhini, 👸</h2>
+        <p>
+            There was a time when these words lived only in my heart, but today I finally have the courage to say them.
+        </p>
+        
+        <br>
+        
+        <p>
+            You make my world brighter, my heart happier, and my life more meaningful. Every moment with you is a memory I'll always cherish.
+        </p>
+        
+        <br>
+        
+        <h3>
+            I love you Pravardhini, truly and wholeheartedly.
+        </h3>
+        
+        <br>
+        
+        <p>
+            I don't know what tomorrow has planned for us, but if I get one wish, it's to spend every tomorrow with you.
+        </p>
+        
+        <br>
+        
+        <p>
+            So today, with all the courage I have...
+        </p>
+        
+        <br>
+        
+        <h3>
+            Will you be mine? ❤️🌹
+        </h3>
+        <button id="closePopup" type="button">Close ❤️</button>
+    </div>
+</div>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js" defer></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        AOS.init({ duration: 1200, once: true });
+    });
+</script>
+<script src="script.js" defer></script>
+
+</body>
+          </html>
